@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <title>App ionic</title>
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-icon name="logo-ionic" slot="start" style="height: 40px;width: 20px;margin-left: 10px;"></ion-icon>
+                <ion-title>Productos</ion-title>
+                <h6 slot="end">TOTAL: <span id="total">0</span>$</h6>
+                <ion-icon name="cart-outline" slot="end" style="height: 40px;width: 20px;padding: 10px;"></ion-icon>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title style="text-align: center;">AGREGAR PRODUCTO</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-contend>
+                                <ion-item>
+                                    <ion-label position="floating">Nombre:</ion-label>
+                                    <ion-input id="nombre" type="text"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Precio:</ion-label>
+                                    <ion-input id="precio" type="number"></ion-input>
+                                </ion-item>
+                                <ion-button id="boton-guardar" color="success" style="width: 100%;">Guardar</ion-button>
+                                <ion-button id="boton-limpiar" color="danger" style="width: 100%;">Limpiar</ion-button>
+                            </ion-card-contend>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col id="products" size-md="6" offset-md="3">
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
